@@ -2,7 +2,6 @@ package handler
 
 import (
 	"net/http"
-	"time"
 
 	"github.com/eduardylopes/gopportunities/schemas"
 	"github.com/gin-gonic/gin"
@@ -34,16 +33,15 @@ func CreateOpeningHandler(ctx *gin.Context) {
 	}
 
 	openingRes := schemas.OpeningResponse{
-		ID:        opening.ID,
-		Role:      opening.Role,
-		Location:  opening.Location,
-		Company:   opening.Company,
-		Remote:    opening.Remote,
-		Link:      opening.Link,
-		Salary:    opening.Salary,
-		CreateAt:  opening.CreatedAt,
-		UpdateAt:  opening.UpdatedAt,
-		DeletedAt: time.Time{},
+		ID:       opening.ID,
+		Role:     opening.Role,
+		Location: opening.Location,
+		Company:  opening.Company,
+		Remote:   opening.Remote,
+		Link:     opening.Link,
+		Salary:   opening.Salary,
+		CreateAt: opening.CreatedAt,
+		UpdateAt: opening.UpdatedAt,
 	}
 
 	sendSuccess(ctx, "create-opening", openingRes)
