@@ -43,18 +43,18 @@ func (l *Logger) Error(v ...interface{}) {
 	l.err.Println(v...)
 }
 
-func (l *Logger) DebugF(format string, v ...interface{}) {
+func (l *Logger) Debugf(format string, v ...interface{}) {
 	l.debug.Printf(format, v...)
 }
 
-func (l *Logger) InfoF(format string, v ...interface{}) {
+func (l *Logger) Infof(format string, v ...interface{}) {
 	l.info.Printf(format, v...)
 }
 
-func (l *Logger) WarnF(format string, v ...interface{}) {
+func (l *Logger) Warnf(format string, v ...interface{}) {
 	l.warning.Printf(format, v...)
 }
 
-func (l *Logger) ErrorF(format string, v ...interface{}) {
+func (l *Logger) Errorf(format string, v ...interface{}) {
 	l.err.Printf(format, v...)
 }
